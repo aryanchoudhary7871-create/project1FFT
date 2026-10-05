@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alliance Esports Championship 2026</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 10px;
+background-color: #ffffff;
+color: #000000;
+}
+#hdr {
+background-color: #6b21a8;
+color: white;
+padding: 10px;
+}
+ul {
+display: flex;
+justify-content: space-around;
+padding: 5px 0;
+}
+a {
+color: white;
+}
+#bnr {
+width: 100%;
+max-width: 600px;
+display: block;
+margin: 10px auto;
+}
+#dtl, #tbl, #frm, #cnt {
+text-align: center;
+margin: 20px 0;
+}
+.spkgrd {
+display: grid;
+grid-template-columns: 300px 300px 300px;
+gap: 10px;
+text-align: center;
+margin-top: 10px;
+}
+.spkcrd img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+margin-top: 5px;
+}
+form {
+border: 1px solid #6b21a8;
+padding: 15px;
+max-width: 400px;
+margin: auto;
+}
+button {
+background-color: #6b21a8;
+color: white;
+border: none;
+padding: 6px 12px;
+}
+h2 {
+color: #6b21a8;
+}
+thead {
+background-color: #6b21a8;
+color: white;
+}
+
+@media (max-width: 600px) {
+body {
+background-color: #f0fdf4;
+}
+#hdr {
+background-color: #15803d;
+}
+h2 {
+color: #15803d;
+}
+thead {
+background-color: #15803d;
+}
+form {
+border-color: #15803d;
+background-color: #ffffff;
+}
+button {
+background-color: #15803d;
+}
+.spkgrd {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+<div id="hm">
+<div id="hdr">
+<h1 style="text-align:center;">Alliance Esports Championship 2026</h1>
+<ul>
+<li><a href="#hm">Home</a></li>
+<li><a href="#dtl">Details</a></li>
+<li><a href="#tbl">Schedule</a></li>
+<li><a href="#spk">Speakers</a></li>
+<li><a href="#frm">Form</a></li>
+<li><a href="#cnt">Contact</a></li>
+</ul>
+</div>
+<img src="./download.jpg" id="bnr" alt="Alliance Esports Championship 2026 Banner">
+</div>
+<div id="dtl">
+<h2>Event Detail</h2>
+<p><b>Venue:</b> Main Auditorium, Alliance University, Bengaluru</p>
+<p><b>Prize Pool:</b> ₹2,00,000</p>
+<p><b>Showcase:</b> ESP Cultural Showcase & Fusion Night</p>
+</div>
+<div id="tbl">
+<h2>Schedule Table</h2>
+<table border="1" style="border-collapse: collapse; margin: 10px auto; width: 100%; max-width: 600px;">
+<thead>
+<tr>
+<th>Sr No</th>
+<th>Activity</th>
+<th>Timing</th>
+<th>Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Opening Ceremony</td>
+<td>09:00 AM - 10:00 AM</td>
+<td>Main Stage</td>
+</tr>
+<tr>
+<td>2</td>
+<td>BGMI & Valorant Qualifiers</td>
+<td>10:00 AM - 01:00 PM</td>
+<td>Gaming Zone A & B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lunch Break</td>
+<td>01:00 PM - 02:00 PM</td>
+<td>Cafeteria</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Grand Finals</td>
+<td>03:30 PM - 06:00 PM</td>
+<td>Main Stage</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="spk">
+<h2 style="text-align: center;">Guest Speakers</h2>
+<div class="spkgrd">
+<div class="spkcrd">
+<p>Rohan Sharma<br><small>Pro Caster</small></p>
+<img src="./cliff1126-hacker-8003399_1920.jpg" alt="Rohan Sharma">
+</div>
+<div class="spkcrd">
+<p>Ananya Verma<br><small>Esports Analyst</small></p>
+<img src="./459393.jpg" alt="Ananya Verma">
+</div>
+<div class="spkcrd">
+<p>Vikram Patel<br><small>Game Dev</small></p>
+<img src="./GAME.jpg" alt="Vikram Patel">
+</div>
+</div>
+</div>
+<div id="frm">
+<form>
+<h2>Registration Form</h2>
+<label>Name:</label><br>
+<input type="text" id="nm"><br><br>
+<label>Email:</label><br>
+<input type="email" id="em"><br><br>
+<label>Select Game:</label><br>
+<select id="gm" required>
+<option value="">Select Event</option>
+<option value="bgmi">BGMI Squad</option>
+<option value="valorant">Valorant 5v5</option>
+<option value="freefire">Free Fire Squad</option>
+</select><br><br>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</form>
+</div>
+<div id="cnt">
+<h2>Contact Us</h2>
+<p>Email: esports@alliance.edu.in | Mob: +91 98765 43210</p>
+<p>Alliance University, Bengaluru</p>
+</div>
+</body>
+</html>
