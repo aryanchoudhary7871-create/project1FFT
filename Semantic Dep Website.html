@@ -1,0 +1,442 @@
+<html>
+<head>
+    <title>Semantic Department Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 16px Arial, sans-serif;
+            color: #222;
+        }
+        header,
+        footer {
+            padding: 15px;
+            color: white;
+            text-align: center;
+            background: #ff3b3b;
+        }
+        nav,
+        .image-row,
+        #specialization,
+        .contac {
+            display: flex;
+            justify-content: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        nav {
+            justify-content: space-around;
+            margin-top: 12px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 { font-size: 28px; }
+        h2,
+        h3,
+        h4 {
+            color: #ff0000;
+        }
+        h2 { margin: 20px 0; font-size: 30px; }
+        h3 { margin: 20px 0 10px; text-align: center; }
+        h4 { margin-bottom: 10px; }
+        p {
+            margin: 10px;
+            line-height: 1.5;
+        }
+        .con {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .intro p { text-align: justify; }
+        .image-row { margin-top: 15px; }
+        .image-row img {
+            width: 23%;
+            height: 180px;
+            border: 1px solid #ccc;
+            object-fit: cover;
+        }
+        #specialization {
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+        #label {
+            width: 22%;
+            min-width: 150px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            background: #f2f2f2;
+            border: 1px solid #ccc;
+        }
+        .gr {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .car {
+            flex: 1 1 220px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            background: #ffffff;
+        }
+        .facu {
+            flex: 1 1 200px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background: #fdfdfd;
+        }
+        .img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #ff0000;
+        }
+        ul { margin-left: 20px; line-height: 1.7; }
+        table {
+            width: 100%;
+            margin: 15px 0;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            color: white;
+            background: #ff2a00;
+        }
+        .contac .car { flex: 1 1 300px; }
+        form {
+            display: grid;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        input,
+        textarea,
+        button {
+            padding: 8px;
+            font: inherit;
+            border: 1px solid #bbb;
+        }
+        button {
+            color: white;
+            background: #ff3700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Semantic Department Website</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Department</a>
+            <a href="#faculty">Faculty</a>
+            <a href="#courses">Courses</a>
+            <a href="#timetable">Timetable</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section >
+            <div class="con" id="home">
+                <p>
+                    The Master of Computer Applications (MCA) program with specializations in Data Science, General,
+                    Generative AI, and Game Designing is designed to deliver advanced computing knowledge along with
+                    domain-specific expertise aligned to emerging industry trends. The program follows a comprehensive,
+                    application-driven approach, enabling students to build strong conceptual understanding and practical
+                    proficiency in core areas such as programming (Java, Python), data structures, algorithms, database
+                    management systems, cloud computing, and software engineering.
+                </p>
+                <marquee><h2>Welcome to Alliance University</h2></marquee>
+                <h3>Highlights</h3>
+                <article class="image-row">
+                    <img src="./elchinator-source-4280758_1920.jpg" alt="Technology image">
+                    <img src="./MCA.jpg" alt="Coding image">
+                    <img src="./brianpenny-robot-8563414_1920.jpg" alt="AI image">
+                    <img src="./GAME.jpg" alt="Design image">
+                </article>
+                <div id="specialization">
+                    <p id="label">Data Science</p>
+                    <p id="label">General</p>
+                    <p id="label">Generative AI</p>
+                    <p id="label">Game Designing</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="con" id="about">
+                <h3>About Department</h3>
+                <p>
+                    From the early stages, students progressively develop expertise in their chosen domains. Data Science
+                    focuses on data analysis, statistical modeling, visualization, and big data technologies. Generative AI
+                    emphasizes deep learning, large language models, natural language processing, and intelligent systems.
+                    Game Designing covers game design, graphics and animation, UI/UX, and immersive technologies like VR/AR.
+                    The General track offers flexibility to explore multiple computing domains.
+                </p>
+                <p>
+                    The program integrates experiential learning through hands-on labs, design projects, and capstone work,
+                    enabling students to develop real-world solutions such as AI applications, data-driven systems, and
+                    interactive digital experiences. A strong emphasis on collaborative learning enhances teamwork,
+                    communication, and project management skills.
+                </p>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="con">
+                <h3>Key Features</h3>
+                <div class="gr">
+                    <div class="car">
+                        <h4>Advanced Computing</h4>
+                        <p>Develop skills in software engineering, cloud computing, database management, and modern programming systems.</p>
+                    </div>
+                    <div class="car">
+                        <h4>Industry-Aligned Curriculum</h4>
+                        <p>Get exposure to current technologies, live projects, internships, and guidance from professionals and faculty.</p>
+                    </div>
+                    <div class="car">
+                        <h4>Specialized Learning Tracks</h4>
+                        <p>Options in Data Science, General, Generative AI, and Game Designing to match career and research interests.</p>
+                    </div>
+                    <div class="car">
+                        <h4>Career Readiness</h4>
+                        <p>Prepare for careers in software development, AI, product engineering, analytics, and digital innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="section">
+            <div class="con">
+                <h3>Courses</h3>
+                <h4>MCA Subjects</h4>
+                <p><strong>Duration:</strong> 2 years / 4 semesters</p>
+                <p><strong>Program Focus:</strong> Advanced software engineering and systems management for high-level technical roles.</p>
+                <table>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Core Theory & Focus Areas</th>
+                    </tr>
+                    <tr>
+                        <td>Semester 1</td>
+                        <td>Frontend Framework, Problem-Solving Logic, Discrete Structure, Communication Skills, Python Fundamentals</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 2</td>
+                        <td>Data Structures in C++, DBMS, Discrete Mathematics, Operating Systems</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 3</td>
+                        <td>Java Programming, Computer Networks, Software Engineering, Web Technologies</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 4</td>
+                        <td>Python Programming, Machine Learning, Cloud Computing, Major Project</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="faculty" class="section">
+            <div class="con">
+                <h3>Faculty Details</h3>
+                <div class="gr">
+                    <article class="facu">
+                        <img src="./1dal.jpg" alt="Prof. Durga" class="img">
+                        <h4>Prof. Durga</h4>
+                        <p><b>Designation:</b> Associate Professor</p>
+                        <p><b>Subjects:</b> Advanced Data Science Techniques</p>
+                    </article>
+                    <article class="facu">
+                        <img src="./22.jpg" alt="Prof. Raghav" class="img">
+                        <h4>Prof. Raghav</h4>
+                        <p><b>Designation:</b> Associate Professor</p>
+                        <p><b>Subjects:</b> Frontend Framework and Technologies</p>
+                    </article>
+                    <article class="facu">
+                        <img src="./33.jpg" alt="Prof. Ajith" class="img">
+                        <h4>Prof. Ajith</h4>
+                        <p><b>Designation:</b> Assistant Professor</p>
+                        <p><b>Subjects:</b> Problem Solving</p>
+                    </article>
+                    <article class="facu">
+                        <img src="./44.jpg" alt="Dr. Kushal" class="img">
+                        <h4>Dr. Kushal</h4>
+                        <p><b>Designation:</b> Assistant Professor</p>
+                        <p><b>Subjects:</b> Basic to Advance Python</p>
+                    </article>
+                    <article class="facu">
+                        <img src="./444.jpg" alt="Dr. Darshini" class="img">
+                        <h4>Dr. Darshini</h4>
+                        <p><b>Designation:</b> Assistant Professor</p>
+                        <p><b>Subjects:</b> Communication Skills</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="timetable" class="section">
+            <div class="con">
+                <h3>Timetable (Semester I)</h3>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>9:00 AM - 11:00 AM</th>
+                        <th>11:15 AM - 1:15 PM</th>
+                        <th>2:00 PM - 4:00 PM</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Frontend Framework</td>
+                        <td>Problem-Solving Logic</td>
+                        <td>Communication Skills</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Discrete Structure</td>
+                        <td>Frontend Framework</td>
+                        <td>Python Fundamentals</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Problem-Solving Logic</td>
+                        <td>Discrete Structure</td>
+                        <td>Communication Skills</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Python Fundamentals</td>
+                        <td>Frontend Framework</td>
+                        <td>Discrete Structure</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Communication Skills</td>
+                        <td>Problem-Solving Logic</td>
+                        <td>Mentorship / Review</td>
+                    </tr>
+                </table>
+                <h3>Lab Schedule</h3>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Lab Slot (2:00 PM - 5:00 PM)</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Frontend Framework Lab</td>
+                        <td>Computer Lab 1</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Python Lab</td>
+                        <td>Computer Lab 2</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="con">
+                <h3>Achievements</h3>
+                <div class="gr">
+                    <article class="car">
+                        <h4>Student Achievements</h4>
+                        <ul>
+                            <li>Won 1st prize at National Hackathon 2025</li>
+                            <li>Achieved high placement rates across tech companies</li>
+                            <li>ICPC Regional Finalists</li>
+                        </ul>
+                    </article>
+                    <article class="car">
+                        <h4>Faculty Achievements</h4>
+                        <ul>
+                            <li>Published high-impact research papers in IEEE</li>
+                            <li>Conducted hands-on technology workshops</li>
+                            <li>Authored textbooks on Cloud Computing</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="section">
+            <div class="con">
+                <h3>Events</h3>
+                <div class="gr">
+                    <article class="car">
+                        <h4>Workshops</h4>
+                        <p>Hands-on sessions in coding, generative AI, cloud computing, and data science.</p>
+                    </article>
+                    <article class="car">
+                        <h4>Seminars</h4>
+                        <p>Talks by faculty members, alumni, researchers, and industry experts.</p>
+                    </article>
+                    <article class="car">
+                        <h4>Hackathons</h4>
+                        <p>Team-based 24-hour coding challenges for creative tech solutions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="con">
+                <h3>Contact</h3>
+                <div class="contac">
+                    <div class="car">
+                        <h4>Admissions Office</h4>
+                        <p>Alliance University</p>
+                        <p>Phone: +91 99805 20483</p>
+                        <p>Email: mca@alliance.edu.in</p>
+                    </div>
+                    <div class="car">
+                        <h4>Program Focus</h4>
+                        <p>Software engineering, data science, AI, and game design with practical industry exposure.</p>
+                    </div>
+                </div>
+                <div class="car">
+                    <h4>Contact Form</h4>
+                    <form action="#contact" method="post">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Semantic Department Website</p>
+        <p>Content source: Alliance University MCA Program</p>
+    </footer>
+</body>
+</html>
