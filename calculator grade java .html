@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>JavaScript Grade Calculator</title>
+        <style>
+            body{
+                background-color: antiquewhite;
+            }
+            div
+            {
+                margin-left: 600px;
+                border: 5px solid black;
+                margin-top: 200px;
+                padding: 30px;
+                width: 300px;
+                background: rgb(255, 66, 3);
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <form>
+            <h1>Grade Calculator</h1>
+            <input type="text" name="name" id="n" placeholder="Enter name of student "><br><br>
+            <input type="number" name="m1" id="mark1" placeholder="Enter marks of Maths"><br><br>
+            <input type="number" name="m2" id="mark2" placeholder="Enter marks of Science"><br><br>
+            <input type="number" name="m3" id="mark3" placeholder="Enter marks of English"><br><br>
+            <input type="number" name="m4" id="mark4" placeholder="Enter marks of SocialScience"><br><br>
+            <input type="number" name="m5" id="mark5" placeholder="Enter marks of Hindi"><br><br>
+            <button type="button" onclick="Calculate()">Calculate</button><br><br>
+            <button type="button" onclick="Reset()">Reset</button>
+            <p id="result"></p>
+        </form>
+        </div>
+        <script>
+            function Reset()
+            {
+                document.querySelector('form').reset();
+                document.getElementById('result').innerHTML = "";
+            }
+            
+            function Calculate()
+            {
+                let name = document.getElementById('n').value;
+            
+                let m1 = Number(document.getElementById('mark1').value);
+                let m2 = Number(document.getElementById('mark2').value);
+                let m3 = Number(document.getElementById('mark3').value);
+                let m4 = Number(document.getElementById('mark4').value);
+                let m5 = Number(document.getElementById('mark5').value);
+            
+                if (name === "")
+                {
+                    document.getElementById('result').innerHTML = "Please enter student name.";
+                    return;
+                }
+            
+                if (m1 >= 0 && m1 <= 100 &&
+                    m2 >= 0 && m2 <= 100 &&
+                    m3 >= 0 && m3 <= 100 &&
+                    m4 >= 0 && m4 <= 100 &&
+                    m5 >= 0 && m5 <= 100)
+                {
+                    let total = m1 + m2 + m3 + m4 + m5;
+                    let avg = total / 5;
+                    let Perc = (total / 500) * 100;
+            
+                    let grade;
+            
+                    if (Perc >= 90)
+                    {
+                        grade = "A+";
+                    }
+                    else if (Perc >= 80)
+                    {
+                        grade = "A";
+                    }
+                    else if (Perc >= 70)
+                    {
+                        grade = "B";
+                    }
+                    else if (Perc >= 60)
+                    {
+                        grade = "C";
+                    }
+                    else if (Perc >= 50)
+                    {
+                        grade = "D";
+                    }
+                    else
+                    {
+                        grade = "F";
+                    }
+            
+                    let status;
+            
+                    if (m1 >= 35 && m2 >= 35 && m3 >= 35 && m4 >= 35 && m5 >= 35)
+                    {
+                        status = "Pass";
+                    }
+                    else
+                    {
+                        status = "Fail";
+                    }
+            
+                    document.getElementById('result').innerHTML =
+                        "<h1>STUDENT DETAILS</h1>" +
+                        "------------------" +
+                        "<br>" +
+                        "<h3>Student Name : " + name + "</h3><br>" +
+                        "<h3>Total Marks : " + total + "</h3><br>" +
+                        "<h3>Average Marks : " + avg.toFixed(2) + "</h3><br>" +
+                        "<h3>Percentage : " + Perc.toFixed(2) + "%</h3><br>" +
+                        "<h3>Grade : " + grade + "</h3><br>" +
+                        "<h3>Result : " + status + "</h3>";
+                }
+                else
+                {
+                    document.getElementById('result').innerHTML =
+                        "Please enter marks between 0 and 100.";
+                }
+            }
+        </script>
+    </body>
+</html>
