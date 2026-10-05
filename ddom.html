@@ -1,0 +1,42 @@
+<html>
+<head></head>
+    <title>Dom</title>
+    <style></style>
+</head>
+<body>
+    <!-- <h1 id="head">DOM</h1>
+    <button onclick="btn()">change</button> -->
+    <seection>
+    <form>
+        <h1>Login Form</h1>
+        <label>userName:</label>
+        <input type="text" name="uname" id="v1"><br><br>
+        <label>password:</label>
+        <input type="password" name="upwd" id="v2"><br><br>
+        <button onclick="login()" type="button">login</button>
+        <p id="result"></p>
+    </form>
+    </section>
+    <script>
+        function login() {
+            let uname=document.getElementById("v1").value;
+            let upwd=document.getElementById("v2").value;
+          if(uname=="pradeep" && upwd=="1234"){
+            document.getElementById("result").innerHTML = "login successful!!!";
+            result.style.color="green"
+          }
+          else{
+            document.getElementById("result").innerHTML = "login failed!!!";
+            result.style.color="green"
+          }
+        }
+        function btn() {
+            // alert("hello")
+            document.getElementById("head").innerHTML="my name is pradeep"
+        };
+        // let a=10;
+        // let b=20;
+        // document.write(a+b);
+    </script>    
+</body>
+</html>
