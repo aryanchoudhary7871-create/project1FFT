@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <style>
+        body
+        {
+            background-color: rgb(255, 159, 5);
+        }
+        div
+        {
+            margin-left: 500px;
+            border: 5px solid black;
+            margin-top: 100px;
+            padding: 30px;
+            width: 500px;
+            background: rgb(128, 0, 255);
+            border-radius: 20px;
+        }
+        input
+        {
+            padding: 8px;
+            width: 300px;
+        }
+        button
+        {
+            padding: 8px;
+            margin: 5px;
+        }
+        li
+        {
+            margin: 10px;
+            padding: 8px;
+            background-color: white;
+        }
+        .completed
+        {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <h1>To-Do List</h1>
+            <label>Task : </label>
+            <input type="text" id="task" placeholder="Enter your task">
+            <button type="button" onclick="AddTask()">Add Task</button>
+            <br><br>
+            <button type="button" onclick="ShowAll()">All</button>
+            <button type="button" onclick="ShowPending()">Pending</button>
+            <button type="button" onclick="ShowCompleted()">Completed</button>
+            <button type="button" onclick="ClearCompleted()">Clear Completed</button>
+            <h3 id="count">Total Tasks : 0</h3>
+            <ul id="taskList"></ul>
+        </form>
+    </div>
+    <script>
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        let editIndex = -1;
+        function AddTask()
+        {
+            let task = document.getElementById("task").value;
+            if (task === "")
+            {
+                alert("Please enter a task.");
+                return;
+            }
+            if (editIndex === -1)
+            {
+                tasks.push(
+                {
+                    name: task,
+                    completed: false
+                });
+            }
+            else
+            {
+                tasks[editIndex].name = task;
+                editIndex = -1;
+            }
+            document.getElementById("task").value = "";
+            SaveTasks();
+            DisplayTasks(tasks);
+        }
+        function DisplayTasks(list)
+        {
+            let taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            for (let i = 0; i < list.length; i++)
+            {
+                let li = document.createElement("li");
+
+                if (list[i].completed)
+                {
+                    li.className = "completed";
+                }
+                li.innerHTML =
+                    list[i].name +
+                    " " +
+                    "<button type='button' onclick='CompleteTask(" + tasks.indexOf(list[i]) + ")'>Complete</button>" +
+                    "<button type='button' onclick='EditTask(" + tasks.indexOf(list[i]) + ")'>Edit</button>" +
+                    "<button type='button' onclick='DeleteTask(" + tasks.indexOf(list[i]) + ")'>Delete</button>";
+                taskList.appendChild(li);
+            }
+            document.getElementById("count").innerHTML =
+                "Total Tasks : " + tasks.length;
+        }
+        function CompleteTask(index)
+        {
+            tasks[index].completed = true;
+            SaveTasks();
+            DisplayTasks(tasks);
+        }
+        function EditTask(index)
+        {
+            document.getElementById("task").value = tasks[index].name;
+            editIndex = index;
+        }
+        function DeleteTask(index)
+        {
+            tasks.splice(index, 1);
+            SaveTasks();
+            DisplayTasks(tasks);
+        }
+        function ShowAll()
+        {
+            DisplayTasks(tasks);
+        }
+        function ShowPending()
+        {
+            let pending = [];
+
+            for (let i = 0; i < tasks.length; i++)
+            {
+                if (tasks[i].completed === false)
+                {
+                    pending.push(tasks[i]);
+                }
+            }
+            DisplayTasks(pending);
+        }
+        function ShowCompleted()
+        {
+            let completed = [];
+            for (let i = 0; i < tasks.length; i++)
+            {
+                if (tasks[i].completed === true)
+                {
+                    completed.push(tasks[i]);
+                }
+            }
+            DisplayTasks(completed);
+        }
+        function ClearCompleted()
+        {
+            let newTasks = [];
+            for (let i = 0; i < tasks.length; i++)
+            {
+                if (tasks[i].completed === false)
+                {
+                    newTasks.push(tasks[i]);
+                }
+            }
+            tasks = newTasks;
+            SaveTasks();
+            DisplayTasks(tasks);
+        }
+        function SaveTasks()
+        {
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+        DisplayTasks(tasks);
+    </script>
+</body>
+</html>
